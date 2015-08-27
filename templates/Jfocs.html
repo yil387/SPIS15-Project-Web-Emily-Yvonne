@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}Foundation of CS Jeopardy{% endblock %}
+
+{% block content %}
+
+
+<table class="jGameBoard">
+  <tr class="jHead"></tr>
+    <td>cat0</td>
+    <td>cat1</td>
+    <td>cat2</td>
+    <td>cat3</td>
+    <td>cat4</td>
+    <td>cat5</td></tr>
+
+  <tr class="jBoard">
+  {% for i in range(6) %}
+   <td><a href='/Qfocs/{{ i }}/100'>$100</a></td>
+  {% endfor %}
+  </tr>
+  <tr class="jBoard">
+  {% for i in range(6) %}
+   <td><a href='/Qfocs/{{ i }}/200'>$200</a></td>
+  {% endfor %}
+  </tr>
+  <tr class="jBoard">
+  {% for i in range(6) %}
+   <td><a href='/Qfocs/{{ i }}/300'>$300</a></td>
+  {% endfor %}
+  </tr>
+  <tr class="jBoard">
+  {% for i in range(6) %}
+   <td><a href='/Qfocs/{{ i }}/400'>$400</a></td>
+  {% endfor %}
+  </tr>
+  <tr class="jBoard">
+  {% for i in range(6) %}
+   <td><a href='/Qfocs/{{ i }}/500'>$500</a></td>
+  {% endfor %}
+  </tr>
+
+</table>
+
+{% endblock %}

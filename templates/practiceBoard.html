@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block title %}Something like a Jeopardy board{% endblock %}
+
+{% block content %}
+  <h1>Try making a Jeopardy Board</h1>
+
+<table class="jGameBoard">
+<tr class="jHead">
+  <td>UCSD<br>alumni</td>
+  <td>UCSD<br>places</td>
+  <td>UCSD<br>facts</td>
+  <td>UCSD<br>colleges</td>
+  <td>UCSD<br>events</td>
+  <td>UCSD<br>orgs</td>
+</tr>
+<tr class="jBoard">
+{% for i in range(6) %}
+ <td><a href='/answer/{{ i }}/100'>$ 100</a></td>
+{% endfor %}
+</tr>
+<tr class="jBoard">
+{% for i in range(6) %}
+ <td><a href='/answer/{{ i }}/200'>$ 200</a></td>
+{% endfor %}
+</tr>
+<tr class="jBoard">
+{% for i in range(6) %}
+ <td><a href='/answer/{{ i }}/300'>$ 300</a></td>
+{% endfor %}
+</tr>
+
+<tr class="jBoard">
+{% for i in range(6) %}
+ <td><a href='/answer/{{ i }}/400'>$ 400</a></td>
+{% endfor %}
+</tr>
+
+<tr class="jBoard">
+{% for i in range(6) %}
+ <td><a href='/answer/{{ i }}/500'>$ 500</a></td>
+{% endfor %}
+</tr>
+</table>
+
+
+{% endblock %}
