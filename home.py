@@ -1,6 +1,13 @@
+import os
 from flask import Flask, url_for, render_template, request
+from flask import redirect
+from flask import session
 
 app = Flask(__name__)
+
+
+app.secret_key='gpknangaxqppgnk'; 
+
 
 app.catagories = ['UCSD alumni', 'UCSD places', 'UCSD facts', 'UCSD colleges', 'UCSD events', 'UCSD orgs']
 
@@ -11,7 +18,7 @@ focsCats = []
 ucsdQs = {100:'Famously originating in 1965 from a physics exam question centering on the velocity on impact of a dropped object',\
           200:'One of the oldest and largest centers for ocean and Earth science research, public service, undergraduate and graduate training in the world',\
           300:'Created in 1999, it is a charter school located on UCSD',\
-          400:'Hall’s interior design contains triangular wood and plaster surfaces that fold around the room in order to diffuse sound throughout the space',\
+          400:'Hall\'s interior design contains triangular wood and plaster surfaces that fold around the room in order to diffuse sound throughout the space',\
           500:'University celebrated the opening of this building on 18 May 2008?',\
           101:'Save 10% on every purchase at all UC San Diego Housing and Dining Services locations',\
           201:'March 2nd is the deadline for this program',\
