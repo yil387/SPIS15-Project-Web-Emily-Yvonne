@@ -1,0 +1,19 @@
+import turtle
+turtle.forward (100)
+turtle.left (120)
+turtle.forward (200)
+turtle.left (150)
+turtle.forward (180)
+What is a RIGHT TRIANGLE?
+
+def myLen(List):
+    if List == []:
+        return 0
+    else:
+        return 1 + myLen(List[1:])
+What is return the Length of My List?
+
+def doubleIt(a):
+    """return two times a"""
+    return _ _ _
+What is a+a?
