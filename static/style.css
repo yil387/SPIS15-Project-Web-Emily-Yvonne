@@ -1,5 +1,5 @@
 body {
-    background-color: #ffffff;
+    background-color: #000029;
 }
 
 h1 {
@@ -18,6 +18,12 @@ table.jGameBoard {
 
     font-family: sans-serif;
 
+    width: 200%;
+
+}
+
+th {
+    height: 100px;
 }
 
 table.jGameBoard * td {
@@ -46,6 +52,8 @@ table.jGameBoard * a:hover {
 table.jGameBoard * a:visited {
     color:yellow;
 }
+
+
 
 a {
     color:yellow;
