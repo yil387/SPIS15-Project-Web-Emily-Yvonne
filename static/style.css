@@ -5,6 +5,7 @@ body {
 h1 {
     color: orange;
     text-align: center;
+    font-size: 50px;
 }
 
 p {
@@ -18,26 +19,27 @@ table.jGameBoard {
 
     font-family: sans-serif;
 
-    width: 200%;
+    width: 125%;
 
 }
 
-th {
-    height: 100px;
-}
+
 
 table.jGameBoard * td {
     border: 2px solid yellow;
     padding: 4px;
 }
 
-tr.jHead td {
+tr.jHead th {
     text-align:center;
+    font-weight: bold;
+    font-size:240%;
 }
 
 tr.jBoard {
     font-weight: bold;
     font-size: 200%;
+    text-align: center;
 }
 
 table.jGameBoard * a {
@@ -61,5 +63,5 @@ a {
 }
 
 a:hover {
-    color:orange;
+    color:pink;
 }
