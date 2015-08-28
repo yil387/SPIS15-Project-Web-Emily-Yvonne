@@ -33,3 +33,15 @@ What is the coordinate system of an image?
 def numToBinary(0):
     N == 0
 What is a base case?
+
+Name Located in the Centered and is the biggest size in this document
+What is a Resume?
+
+Continously connected, foes from top to bottom, and connects by edge or corner
+What are seams?
+
+15%4 is an example of this
+What is a mod?
+
+Take the best step and never look back
+What is the Greedy Problem Solution?
