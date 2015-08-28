@@ -90,3 +90,12 @@ What is an invert function?
 
 These are letters used to move in vim
 What are h (left), j (down), k (up), and l (right)?
+
+Considers all possibilites when looking for a solution, even if it means going to the previous step.
+What is backtracking?
+
+git add file
+git ____ ______ ________
+git status
+git commit
+What is git push origin master?
