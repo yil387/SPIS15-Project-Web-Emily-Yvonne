@@ -17,3 +17,10 @@ def doubleIt(a):
     """return two times a"""
     return _ _ _
 What is a+a?
+
+Base 2 powered by this number equals 8,192
+What is 2^13 (or 13)?
+
+0001 0010
+What is 34 in binary?
+
