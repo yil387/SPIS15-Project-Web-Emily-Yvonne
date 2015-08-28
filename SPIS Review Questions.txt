@@ -60,3 +60,15 @@ Who is Phil Conrad?
 
 Former Ph.D student at UC San Diego?
 Who is Diba Mirza?
+
+Identation for this code does not matter, but is recommended 
+What is Java?
+
+Vim and Emacs
+What are text editors?
+
+Shows hidden files from A-Z HINT: 3 lines to imput in Command Prompt
+What is quota -vs
+du -sh*
+du -sh .[A-Z]*
+
