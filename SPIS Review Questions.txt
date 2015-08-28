@@ -126,3 +126,9 @@ Identify what is happening:
 for x in range(0, 5):
     print "Hello World"
 What is a for loop?
+
+Tests code often and sets a false function to check if its working
+What is test driven development?
+
+Often uses CSS, HTML, and Javascript in it
+What is a website?
