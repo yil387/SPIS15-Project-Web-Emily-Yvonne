@@ -45,3 +45,18 @@ What is a mod?
 
 Take the best step and never look back
 What is the Greedy Problem Solution?
+
+Recommended to be efficent, resilency, and flexible
+What is a better code?
+
+Biggest taboo for a programmer, can be used instead of repeating over and over
+What is a loop?
+
+Former Google Employee
+Who is Neil Rhodes?
+
+Will be working at UC Santa Barbara this Fall 2015?
+Who is Phil Conrad?
+
+Former Ph.D student at UC San Diego?
+Who is Diba Mirza?
