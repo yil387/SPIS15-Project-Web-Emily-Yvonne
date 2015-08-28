@@ -77,3 +77,13 @@ What are invarients?
 
 These are examples of two types of code - Hello.java and Hello.class
 What is a source code and object code?
+
+   for x in range( 0, width ):
+        for y in range( 0, height ):
+            (red, green, blue) = im.getpixel((x, y))
+            newRed = 255-red
+            newGreen = 255-green
+            newBlue = 255-blue
+            draw.point([(x, y)], (newRed, newGreen, newBlue))
+
+What is an invert function?
