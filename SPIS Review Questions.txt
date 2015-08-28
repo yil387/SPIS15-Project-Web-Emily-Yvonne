@@ -85,7 +85,6 @@ What is a source code and object code?
             newGreen = 255-green
             newBlue = 255-blue
             draw.point([(x, y)], (newRed, newGreen, newBlue))
-
 What is an invert function?
 
 These are letters used to move in vim
@@ -99,3 +98,23 @@ git ____ ______ ________
 git status
 git commit
 What is git push origin master?
+
+Identity what the function does to the image
+def function(im):
+    draw = ImageDraw.Draw(im)
+    
+    imsize = im.size
+    width = imsize[0]
+    height = imsize[1]
+
+    for x in range( 0, width ):
+        for y in range( 0, height ):
+            (red, green, blue) = im.getpixel((x, y))
+            newRed = (0.21*red)
+            newGreen = (0.72*green)
+            newBlue = (0.7*blue)
+            gray = (newRed + newGreen + newBlue)
+            gray = int(gray)
+            draw.point([(x, y)], (gray, gray, gray))
+    im.show()
+What is a grayscale?
