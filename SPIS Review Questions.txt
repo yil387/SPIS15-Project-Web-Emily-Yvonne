@@ -24,3 +24,8 @@ What is 2^13 (or 13)?
 0001 0010
 What is 34 in binary?
 
+Divide a problem into several subproblems and solve each subproblem recursively.
+What is Divide and Conquer method?
+
+Origin starts at the upper left-hand corner
+What is the coordinate system of an image?
