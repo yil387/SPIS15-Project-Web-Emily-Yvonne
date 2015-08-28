@@ -72,3 +72,8 @@ What is quota -vs
 du -sh*
 du -sh .[A-Z]*
 
+Things that don't change
+What are invarients?
+
+These are examples of two types of code - Hello.java and Hello.class
+What is a source code and object code?
