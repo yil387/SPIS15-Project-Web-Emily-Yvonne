@@ -118,3 +118,6 @@ def function(im):
             draw.point([(x, y)], (gray, gray, gray))
     im.show()
 What is a grayscale?
+
+Includes information about you, experiences, and goals
+What is an elevator pitch?
