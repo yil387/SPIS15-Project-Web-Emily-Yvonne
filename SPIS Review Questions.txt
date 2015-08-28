@@ -121,3 +121,8 @@ What is a grayscale?
 
 Includes information about you, experiences, and goals
 What is an elevator pitch?
+
+Identify what is happening:
+for x in range(0, 5):
+    print "Hello World"
+What is a for loop?
