@@ -87,3 +87,6 @@ What is a source code and object code?
             draw.point([(x, y)], (newRed, newGreen, newBlue))
 
 What is an invert function?
+
+These are letters used to move in vim
+What are h (left), j (down), k (up), and l (right)?
