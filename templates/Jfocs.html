@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "Jlayout.html" %}
 
 {% block title %}Foundation of CS Jeopardy{% endblock %}
 
@@ -6,40 +6,45 @@
 
 
 <table class="jGameBoard">
+<tr class='jLogo'><td><a href="/SampleJs"><img src="{{ url_for('static', filename='jeopardy-logo-03.png') }}"</a></td>
+
   <tr class="jHead"></tr>
-    <td>cat0</td>
-    <td>cat1</td>
-    <td>cat2</td>
-    <td>cat3</td>
-    <td>cat4</td>
-    <td>cat5</td></tr>
+    <th>cat0</th>
+    <th>cat1</th>
+    <th>cat2</th>
+    <th>cat3</th>
+    <th>cat4</th>
+    <th>cat5</th></tr>
 
   <tr class="jBoard">
   {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/100'>$100</a></td>
+   <td><a href='/Qfocs/{{ i }}/100'>$<strong>100</strong></a></td>
   {% endfor %}
   </tr>
   <tr class="jBoard">
   {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/200'>$200</a></td>
+   <td><a href='/Qfocs/{{ i }}/200'>$<strong>200</strong></a></td>
   {% endfor %}
   </tr>
   <tr class="jBoard">
   {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/300'>$300</a></td>
+   <td><a href='/Qfocs/{{ i }}/300'>$<strong>300</strong></a></td>
   {% endfor %}
   </tr>
   <tr class="jBoard">
   {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/400'>$400</a></td>
+   <td><a href='/Qfocs/{{ i }}/400'>$<strong>400</strong></a></td>
   {% endfor %}
   </tr>
   <tr class="jBoard">
   {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/500'>$500</a></td>
+   <td><a href='/Qfocs/{{ i }}/500'>$<strong>500</strong></a></td>
   {% endfor %}
   </tr>
 
 </table>
 
+
+<!-- Trying to use session to remember which links are visited, in progress -->
+<h3><a href='/startOver'>End Game</a></h3>
 {% endblock %}

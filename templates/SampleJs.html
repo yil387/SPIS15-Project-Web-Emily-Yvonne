@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style1.css') }}">
-<html>
-<head>
-<title>Sample Jeopardy Games</title>
-</head>
-<body>
+{% extends "layout.html" %}
+
+{% block title %}Sample Jeopardy Games{% endblock %}
+
+{% block content %}
+
 
 <h3>Choose a Game</h3>
-<a href="/Jucsd">UCSD Facts</a><br>
-<a href="/Jfocs">Foundation of Computer Science</a><br>
-<a href="/page5">I Don't Know What Yet</a>
+<h4><a href="/Jucsd">UCSD Facts</a><br>
+<a href="/Jfocs">Foundation of Computer Science</a></h4>
 
-</body>
-</html>
 
+{% endblock %}

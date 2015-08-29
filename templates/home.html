@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<html>
-<head>
-<title>Make Your Jeopardy Game</title>
-</head>
-<body>
+{% extends "layout.html" %}
 
-<h1>Hello from Emily and Yvonne!</h1>
-<p>Welcome to our webapp.
-   Start from our sample Jeopardy game or create your own.</p>
-<a href="/SampleJs">Sample Games</a><br>
-<a href="/YourJ">Make Your Own</a>
+{% block title %}Make Your Jeopardy Game{% endblock %}
 
-</body>
-</html>
+{% block content %}
 
+
+<h2>Hello from Emily and Yvonne!</h2>
+<h3>Welcome to our webapp.
+   Start from our sample Jeopardy game or create your own.</h3>
+<h4><a href="/SampleJs">Sample Games</a></h4><br>
+<h4><a href="/YourJ">Make Your Own</a></h4>
+
+
+
+{% endblock %}
