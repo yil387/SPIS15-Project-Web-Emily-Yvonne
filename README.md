@@ -23,6 +23,8 @@
 
 ###css
 The web browser caches css stylings, therefore, modifications to the css files do not show up until several days later.
-To avoid this, change the file name after each modification, and then run python home.py. The browser cannot use what is cached because the names do not match.
+
+To avoid this, change the file name after each modification, and then run python home.py. The browser cannot use what is cached because the names will not match.
+
 DO REMEMBER TO CHANGE THE REFERENCES IN LAYOUT.HTML.
 
