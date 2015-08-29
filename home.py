@@ -47,12 +47,36 @@ ucsdQs = {100:'Famously originating in 1965 from a physics exam question centeri
           505:'Design and Analysis of Algorithms'}
 
 
-focsQs = {100:'C1Q1', 200:'C1Q2', 300:'C1Q3', 400:'C1Q4', 500:'C1Q5',\
-          101:'C2Q1', 201:'C2Q2', 301:'C2Q3', 401:'C2Q4', 501:'C2Q5',\
-          102:'C3Q1', 202:'C3Q2', 302:'C3Q3', 402:'C3Q4', 502:'C3Q5',\
-          103:'C4Q1', 203:'C4Q2', 303:'C4Q3', 403:'C4Q4', 503:'C4Q5',\
-          104:'C5Q1', 204:'C5Q2', 304:'C5Q3', 404:'C5Q4', 504:'C5Q5',\
-          105:'C6Q1', 205:'C6Q2', 305:'C6Q3', 405:'C6Q4', 505:'C6Q5'}
+focsQs = {100:'<pre>import turtle<br>turtle.forward (100)<br>turtle.left (120)<br>turtle.forward (200)<br>turtle.left (150)<br>turtle.forward (173)</pre>',\
+	  200:'<pre>def myLen(List):<br>	if List == []:<br>		return 0<br>    else:<br>		return 1 + myLen(List[1:])</pre>',\
+	  300:'<pre>def doubleIt(a):<br>	"""return two times a"""<br>	return _ _ _</pre>',\
+	  400:'<pre>Base 2 raised to this number equals 8,192</pre>',\
+	  500:'0001 0010',\
+          101:'Divide a problem into several subproblems and solve each subproblem recursively.',\
+	  201:'Origin starts at the upper left-hand corner',\
+	  301:'<pre>def numToBinary(N):<br>	if N == 0:<br>		return N</pre>',\
+	  401:'Name Located in the Centered and is the biggest size in this document',\
+	  501:'Continously connected, goes from top to bottom, and connects by edge or corner',\
+          102:'15%4 is an example of this',\
+	  202:'Take the best step and never look back',\
+	  302:'Recommended to be efficent, resilent, and flexible',\
+	  402:'Biggest taboo for a programmer, can be used instead of repeating over and over',\
+	  502:'Former Google Employee',\
+          103:'Will be working at UC Santa Barbara this fall?',\
+	  203:'Former Ph.D student at UC San Diego?',\
+	  303:'Identation for this code does not matter, but is recommended',\
+	  403:'Vim and Emacs',\
+	  503:'<pre>Shows hidden files from A-z \nHINT: 3 lines to imput in Command Prompt</pre>',\
+          104:'Things that don\'t change',\
+	  204:'These are examples of two types of code - Hello.java and Hello.class',\
+	  304:'<pre>for x in range( 0, width ):<br>	for y in range( 0, height ):<br>		(red, green, blue) = im.getpixel((x, y))<br>		newRed = 255-red<br>		newGreen = 255-green<br>		newBlue = 255-blue<br>		draw.point([(x, y)], (newRed, newGreen, newBlue))</pre>',\
+	  404:'These are letters used to move in vim',\
+	  504:'Considers all possibilites when looking for a solution, even if it means going to the previous step.',\
+          105:'git add file<br>git ____ ______ ________<br>git status<br>git commit',\
+	  205:'<pre>Identity what the function does to the image<br>def function(im):<br>	draw = ImageDraw.Draw(im)<br>    <br>	imsize = im.size<br>	width = imsize[0]<br>	height = imsize[1]<br>	for x in range( 0, width ):<br>		for y in range( 0, height ):<br>			(red, green, blue) = im.getpixel((x, y))<br>			newRed = (0.21*red)<br>			newGreen = (0.72*green)<br>			newBlue = (0.7*blue)<br>			gray = (newRed + newGreen + newBlue)<br>			gray = int(gray)<br>			draw.point([(x, y)], (gray, gray, gray))<br>	im.show()</pre>',\
+	  305:'Includes information about you, experiences, and goals',\
+	  405:'<pre>Identify what is happening:<br>for x in range(0, 5):<br>	print "Hello World"</pre>',\
+	  505:'Tests code often and sets a false function to check if its working'}
 
 
 
@@ -88,12 +112,36 @@ ucsdAs = {100:'What is the Watermelon drop?',\
 	  505:'What is CSE 101?'}
 
 
-focsAs = {100:'C1A1', 200:'C1A2', 300:'C1A3', 400:'C1A4', 500:'C1A5',\
-          101:'C2A1', 201:'C2A2', 301:'C2A3', 401:'C2A4', 501:'C2A5',\
-          102:'C3A1', 202:'C3A2', 302:'C3A3', 402:'C3A4', 502:'C3A5',\
-          103:'C4A1', 203:'C4A2', 303:'C4A3', 403:'C4A4', 503:'C4A5',\
-          104:'C5A1', 204:'C5A2', 304:'C5A3', 404:'C5A4', 504:'C5A5',\
-          105:'C6A1', 205:'C6A2', 305:'C6A3', 405:'C6A4', 505:'C6A5'}
+focsAs = {100:'What is a RIGHT TRIANGLE?',\
+	  200:'What is return the Length of My List?',\
+	  300:'What is a+a?',\
+	  400:'What is 2^13 (or 13)?',\
+	  500:'What is 34 in binary?',\
+          101:'What is Divide and Conquer method?',\
+	  201:'What is the coordinate system of an image?',\
+	  301:'What is a base case?',\
+	  401:'What is a Resume?',\
+	  501:'What are seams?',\
+          102:'What is a mod?',\
+	  202:'What is the Greedy Problem Solution?',\
+	  302:'What is a better code?',\
+	  402:'What is a loop?',\
+	  502:'Who is Neil Rhodes?',\
+          103:'Who is Phill Conrad?',\
+	  203:'Who is Diba Mirza?',\
+	  303:'What is Java?',\
+	  403:'What are text editors?',\
+	  503:'What is quota -vs\ndu -sh*\ndu -sh .[A-z]*',\
+          104:'What are invarients?',\
+	  204:'What is a source code and object code?',\
+	  304:'What is an invert function?',\
+	  404:'What are h (left), j (down), k (up), and l (right)?',\
+	  504:'What is backtracking?',\
+          105:'What is git push origin master?',\
+	  205:'What is a grayscale?',\
+	  305:'What is an elevator pitch?',\
+	  405:'What is a for loop?',\
+	  505:'What is test driven development?'}
 
 
 @app.route('/')
