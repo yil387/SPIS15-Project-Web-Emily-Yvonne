@@ -148,10 +148,10 @@ def homePage():
     return render_template('home.html')
 
 #Trying to use session to remember which links are visited, in progress
-@app.route('/startOver')
-def startOver():
-    session.clear()
-    return redirect(url_for('homePage'))
+#@app.route('/startOver')
+#def startOver():
+#    session.clear()
+#    return redirect(url_for('homePage'))
 
 @app.route('/SampleJs')
 def SampleJs():
