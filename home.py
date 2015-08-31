@@ -24,7 +24,7 @@ ucsdQs = {100:'<pre>Famously originating in 1965 from a physics exam question ce
           301:'<pre>Rich opportunities for learning, community building, and engagement outside the classroom</pre>',\
           401:'<pre>This contains a 44,000-square-foot floor space</pre>',\
           501:'<pre>The only multi-arts presenting program on campus, ArtPower brings nationally and internationally recognized performing artists to campus</pre>',\
-          102:'<pre>Peterson Hall(both ways), Warren Apartements(both ways), and TPCS(counterclockwise)</pre>',\
+          102:'<pre>Peterson Hall(both ways), Warren Apartments(both ways), and TPCS(counterclockwise)</pre>',\
           202:'<pre>Free tutoring on campus</pre>',\
           302:'<pre>UC San Diego\'s database of off-campus jobs, internships, volunteer opportunities, and on-campus jobs (including work-study)</pre>',\
           402:'<pre>Provides medical care, including urgent care and support services such as laboratory, pharmacy, and x-ray</pre>',\
@@ -55,22 +55,22 @@ focsQs = {100:'<pre>import turtle<br>turtle.forward (100)<br>turtle.left (120)<b
 	  201:'<pre>Origin starts at the upper left-hand corner</pre>',\
 	  301:'<pre>def numToBinary(N):<br>   if N == 0:<br>      return N</pre>',\
 	  401:'<pre>Name Located in the Centered and is the biggest size in this document</pre>',\
-	  501:'<pre>Continously connected, goes from top to bottom, and connects by edge or corner</pre>',\
+	  501:'<pre>Continuously connected, goes from top to bottom, and connects by edge or corner</pre>',\
           102:'<pre>15%4 is an example of this</pre>',\
 	  202:'<pre>Take the best step and never look back</pre>',\
-	  302:'<pre>Recommended to be efficent, resilent, and flexible</pre>',\
+	  302:'<pre>Recommended to be efficient, resilient, and flexible</pre>',\
 	  402:'<pre>Biggest taboo for a programmer, can be used instead of repeating over and over</pre>',\
 	  502:'<pre>Former Google Employee</pre>',\
           103:'<pre>Will be working at UC Santa Barbara this fall?</pre>',\
 	  203:'<pre>Former Ph.D student at UC San Diego?</pre>',\
 	  303:'<pre>Indentation for this code does not matter, but is recommended</pre>',\
 	  403:'<pre>Vim and Emacs</pre>',\
-	  503:'<pre>Shows hidden files from A-z \n  HINT: 3 lines to imput in Command Prompt</pre>',\
+	  503:'<pre>Shows hidden files from A-z \n  HINT: 3 lines to input in Command Prompt</pre>',\
           104:'<pre>Things that don\'t change</pre>',\
 	  204:'<pre>These are examples of two types of code - Hello.java and Hello.class</pre>',\
 	  304:'<pre>for x in range( 0, width ):<br>   for y in range( 0, height ):<br>      (red, green, blue) = im.getpixel((x, y))<br>      newRed = 255-red<br>      newGreen = 255-green<br>      newBlue = 255-blue<br>      draw.point([(x, y)], (newRed, newGreen, newBlue))</pre>',\
 	  404:'<pre>These are letters used to move in vim</pre>',\
-	  504:'<pre>Considers all possibilites when looking for a solution, even if it means going to the previous step.</pre>',\
+	  504:'<pre>Considers all possibilities when looking for a solution, even if it means going to the previous step.</pre>',\
           105:'<pre>git add file<br>git ____ ______ ________<br>git status<br>git commit</pre>',\
 	  205:'<pre>Identity what the function does to the image<br>def function(im):<br>   draw = ImageDraw.Draw(im)<br>   imsize = im.size<br>   width = imsize[0]<br>   height = imsize[1]<br>   for x in range( 0, width ):<br>      for y in range( 0, height ):<br>         (red, green, blue) = im.getpixel((x, y))<br>         newRed = (0.21*red)<br>         newGreen = (0.72*green)<br>         newBlue = (0.7*blue)<br>         gray = (newRed + newGreen + newBlue)<br>         gray = int(gray)<br>         draw.point([(x, y)], (gray, gray, gray))<br>   im.show()</pre>',\
 	  305:'<pre>Includes information about you, experiences, and goals</pre>',\
@@ -131,7 +131,7 @@ focsAs = {100:'<pre>What is a RIGHT TRIANGLE?</pre>',\
 	  303:'<pre>What is Java?</pre>',\
 	  403:'<pre>What are text editors?</pre>',\
 	  503:'<pre>What is quota -vs\ndu -sh*\ndu -sh .[A-z]*',\
-          104:'<pre>What are invarients?</pre>',\
+          104:'<pre>What are invariants?</pre>',\
 	  204:'<pre>What is a source code and object code?</pre>',\
 	  304:'<pre>What is an invert function?</pre>',\
 	  404:'<pre>What are h (left), j (down), k (up), and l (right)?</pre>',\
@@ -148,10 +148,10 @@ def homePage():
     return render_template('home.html')
 
 #Trying to use session to remember which links are visited, in progress
-#@app.route('/startOver')
-#def startOver():
-#    session.clear()
-#    return redirect(url_for('homePage'))
+@app.route('/startOver')
+def startOver():
+    session.clear()
+    return redirect(url_for('SampleJs'))
 
 @app.route('/SampleJs')
 def SampleJs():
@@ -166,10 +166,12 @@ def YourJ():
 #UCSD Jeopardy
 @app.route('/Jucsd')
 def Jucsd():
+    print session
     return render_template('Jucsd.html')
 
-@app.route('/Qucsd/<cat>/<dollar>')
+@app.route('/Qucsd/<cat>/<dollar>',methods=['GET','POST'])
 def Qucsd(cat, dollar):
+    session[(int(cat)+int(dollar))]='usedQ'
     return render_template('Qucsd.html', cat=int(cat), dollar=int(dollar), topics=ucsdCats, Qs=ucsdQs)
 
 @app.route('/Aucsd/<cat>/<dollar>')
@@ -182,8 +184,9 @@ def Aucsd(cat, dollar):
 def Jfocs():
     return render_template('Jfocs.html')
 
-@app.route('/Qfocs/<cat>/<dollar>')
+@app.route('/Qfocs/<cat>/<dollar>',methods=['GET','POST'])
 def Qfocs(cat, dollar):
+    session[(int(cat)+int(dollar))]='usedQ'
     return render_template('Qfocs.html', cat=int(cat), dollar=int(dollar), topics=focsCats, Qs=focsQs)
 
 @app.route('/Afocs/<cat>/<dollar>')
@@ -193,29 +196,6 @@ def Afocs(cat, dollar):
 
 
 
-#Phill's example
-@app.route('/practiceBoard')
-def practiceBoard():
-    return render_template('practiceBoard.html')
-
-@app.route('/answer/<cat>/<dollar>')
-def answer(cat, dollar):
-    return render_template('answer.html', cat=int(cat), dollar=dollar, topics=app.catagories)
-
-
-
-
-
-
-
-#Testing css styling
-@app.route('/teststyle')
-def teststyle():
-    return render_template('styletester.html')
-
-@app.route('/testJstyle')
-def testJstyle():
-    return render_template('Jstyletester.html')
 
 
 if __name__=="__main__":

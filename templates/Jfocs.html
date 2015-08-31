@@ -16,35 +16,15 @@
     <th>cat4</th>
     <th>cat5</th></tr>
 
+  {% for j in range(100, 501, 100) %}
   <tr class="jBoard">
   {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/100'>$<strong>100</strong></a></td>
+   <td>{% if not (i+j)|string in session %}<a href='/Qfocs/{{ i }}/{{ j }}'>$<strong>{{ j }}</strong></a>{% endif %}</td>
   {% endfor %}
   </tr>
-  <tr class="jBoard">
-  {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/200'>$<strong>200</strong></a></td>
   {% endfor %}
-  </tr>
-  <tr class="jBoard">
-  {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/300'>$<strong>300</strong></a></td>
-  {% endfor %}
-  </tr>
-  <tr class="jBoard">
-  {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/400'>$<strong>400</strong></a></td>
-  {% endfor %}
-  </tr>
-  <tr class="jBoard">
-  {% for i in range(6) %}
-   <td><a href='/Qfocs/{{ i }}/500'>$<strong>500</strong></a></td>
-  {% endfor %}
-  </tr>
 
 </table>
 
-
-<!-- Trying to use session to remember which links are visited, in progress -->
-<!-- <h3><a href='/startOver'>End Game</a></h3> -->
+<h3><a href='/startOver'>End Game</a></h3>
 {% endblock %}

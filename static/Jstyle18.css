@@ -1,6 +1,11 @@
 body {
     background-color: #0033CC;
+	p {
+    margin: 100px 50px;
 }
+
+}
+
 
 
 
@@ -12,7 +17,11 @@ pre {
     font-family: sans-serif;
     font-size:150%
     white-space: pre-line;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
     word-wrap: break-word;
+    overflow-x:hidden
 }
 
 
@@ -28,9 +37,7 @@ table {
     table-layout: fixed;
 }
 
-tr.jLogo * td {
-    border: 5px solid #0033CC;
-}
+
 
 th, td {
     text-align: center;
@@ -61,7 +68,7 @@ table * a:hover {
 }
 
 table * a:visited {
-    color:#0033CC;
+    color:yellow;
 }
 
 
