@@ -1,5 +1,5 @@
 body {
-    background-color: #0033CC;
+    background-color: #16389E;
     margin-left: 2cm;
     margin-top: 2cm;
 }
@@ -29,9 +29,9 @@ h1 {text-align: left;
     
 
 table {
-    background-color: #0033CC;
+    background-color: #16389E;
     width: 800px;
-    height: 600px;
+    height: 500px;
     margin-top: 1cm;
     white-space: pre-line;
     font-family: sans-serif;
@@ -58,7 +58,7 @@ th {
 td {
     font-size: 200%;
     color: yellow;
-    height:80px;
+    height:70px;
 }
 
 
@@ -91,17 +91,17 @@ a:hover {
     text-align: left
 }
 a.startover:link {
-    color: #E08566;
+    color: #9DC8E6;
 }
 
 a.startover:visited {
-    color:#AD5C5C;
+    color:#A6A6DB;
 }
 
 a.startover:hover {
-    color:#FA9F80;
+    color:#8DBABA;
 }
 
 a.startover:active {
-    color:#C77676;
+    color:#8DBABA;
 }
