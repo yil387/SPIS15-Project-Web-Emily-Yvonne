@@ -166,7 +166,6 @@ def YourJ():
 #UCSD Jeopardy
 @app.route('/Jucsd')
 def Jucsd():
-    print session
     return render_template('Jucsd.html')
 
 @app.route('/Qucsd/<cat>/<dollar>',methods=['GET','POST'])
