@@ -1,19 +1,13 @@
 body {
     background-color: #0033CC;
-	p {
-    margin: 100px 50px;
+    margin-left: 2cm;
+    margin-top: 2cm;
 }
-
-}
-
-
 
 
 
 pre {
     text-align: left;
-    margin-left: 2cm;
-    margin-top: 3cm;
     font-family: sans-serif;
     font-size:150%
     white-space: pre-line;
@@ -21,16 +15,24 @@ pre {
     white-space: -pre-wrap;
     white-space: -o-pre-wrap;
     word-wrap: break-word;
-    overflow-x:hidden
 }
 
+h1 {text-align: left;
+    font-family: sans-serif;
+    font-size:150%
+    white-space: pre-line;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+    
 
 table {
     background-color: #0033CC;
     width: 800px;
-    height: 500px;
-    margin-left: 2cm;
-    margin-top: 3cm;
+    height: 600px;
+    margin-top: 1cm;
     white-space: pre-line;
     font-family: sans-serif;
     border-collapse: collapse;
@@ -56,7 +58,11 @@ th {
 td {
     font-size: 200%;
     color: yellow;
+    height:80px;
 }
+
+
+
 
 table * a {
     color:yellow;
@@ -72,7 +78,6 @@ table * a:visited {
 }
 
 
-
 a {
     color: yellow;
     text-decoration: none;
@@ -82,3 +87,21 @@ a:hover {
     color:#FFFFCC;
 }
 
+.startover {
+    text-align: left
+}
+a.startover:link {
+    color: #E08566;
+}
+
+a.startover:visited {
+    color:#AD5C5C;
+}
+
+a.startover:hover {
+    color:#FA9F80;
+}
+
+a.startover:active {
+    color:#C77676;
+}
