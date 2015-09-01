@@ -1,5 +1,6 @@
 import os
 from flask import Flask, escape, redirect, render_template, request, session, url_for
+import json
 
 app = Flask(__name__)
 
@@ -193,8 +194,12 @@ def Afocs(cat, dollar):
     return render_template('Afocs.html', cat=int(cat), dollar=int(dollar), topics=focsCats, As=focsAs)
 
 
-
-
+@app.route('/Qfocs.json/<cat>/<dollar>',methods=['GET','POST'])
+def QfocsJSON(cat, dollar):
+    index = int(cat) + int(dollar);
+    # session[index]='usedQ'
+    valueDict = { "question": focsQs[index], "answer" : focsAs[index] }
+    return json.dumps(valueDict)
 
 
 if __name__=="__main__":
