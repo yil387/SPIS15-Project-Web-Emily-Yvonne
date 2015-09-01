@@ -1,0 +1,112 @@
+{% extends "Jlayout.html" %}
+
+{% block title %}Foundation of CS Jeopardy{% endblock %}
+{% block script %} 
+<script>
+$( document ).ready(function() {
+console.log("ready!");
+  $('#showquestion').on('click', function (e) {
+    $("#jeopardy-answer").show();
+
+ });
+  $('.choice').on('click', function (e) {
+     var cat=$(this).data("cat");
+     var dollar=$(this).data("dollar");
+     console.log("iclicked cat="+cat+"dollar="+dollar);
+     $.ajax({url: "/Qfocs.json/"+cat+"/"+dollar, success: function(result){
+            myData=JSON.parse(result);
+            $(this).data("question",myData.question);
+            $(this).data("answer",myData.answer);
+            $('#jeopardy-question').html(myData.question);
+            $('#jeopardy-answer').html(myData.answer);
+            $("#jeopardy-answer").hide();
+            $('#modalquestion').modal('show');  
+        }});
+  $(this).css('visibility','hidden');
+  });
+
+});
+
+
+</script>
+
+
+
+{% endblock %}
+{% block content %}
+
+
+<img src="{{ url_for('static', filename='jeopardy-logo-03.png') }}" alt="JEOPARDY!">
+
+<table class="jGameBoard">
+  <tr class="jHead"></tr>
+    <th>cat0</th>
+    <th>cat1</th>
+    <th>cat2</th>
+    <th>cat3</th>
+    <th>cat4</th>
+    <th>cat5</th></tr>
+
+  {% for j in range(100, 501, 100) %}
+  <tr class="jBoard">
+  {% for i in range(6) %}
+   <td class="choice" data-cat="{{i}}" data-dollar="{{j}}">{% if not (i+j)|string in session %}$<strong>{{ j }}</strong>{% endif %}</td>
+  {% endfor %}
+  </tr>
+  {% endfor %}
+
+</table>
+
+
+
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-Default btn-lg" data-toggle="modal" data-target="#modalInstruction">
+  How to
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalInstruction" role="dialog">
+ <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <h5>Instructions:</h5>
+  </div>
+  <div class="modal-body">
+    <ul>
+      <li>enter instructions later</li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button type="button" data-dismiss="modal" class="btn btn-primary">Ok</button>
+  </div>
+  </div>
+ </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="modalquestion" role="dialog">
+ <div class="modal-dialog">
+  <div class="modal-content">
+  <div class="modal-header">
+    <h5>Answer</h5>
+  </div>
+  <div class="modal-body">
+    <div  id="jeopardy-question">
+      question goes here
+    </div>
+    <div  id="jeopardy-answer">
+      answer goes here
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-primary" id="showquestion">Show question</button>
+    <button type="button" data-dismiss="modal" class="btn btn-primary">Done</button>
+  </div>
+  </div>
+ </div>
+</div>
+
+<h1><a href='/startOver' class='startover'>End Game</a></h1>
+{% endblock %}

@@ -202,5 +202,10 @@ def QfocsJSON(cat, dollar):
     return json.dumps(valueDict)
 
 
+#Foundation of CS Jeopardy 222222222222222
+@app.route('/Jfocs2')
+def Jfocs2():
+    return render_template('Jfocs2.html')
+
 if __name__=="__main__":
-    app.run(debug=False,host="0.0.0.0")
+    app.run(debug=True,host="0.0.0.0")
