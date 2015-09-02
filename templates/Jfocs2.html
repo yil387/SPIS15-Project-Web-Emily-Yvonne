@@ -7,7 +7,6 @@ $( document ).ready(function() {
 console.log("ready!");
   $('#showquestion').on('click', function (e) {
     $("#jeopardy-answer").show();
-
  });
   $('.choice').on('click', function (e) {
      var cat=$(this).data("cat");
@@ -24,12 +23,8 @@ console.log("ready!");
         }});
   $(this).css('visibility','hidden');
   });
-
 });
-
-
 </script>
-
 
 
 {% endblock %}
@@ -55,7 +50,7 @@ console.log("ready!");
   </tr>
   {% endfor %}
 
-</table>
+</table><br>
 
 
 
@@ -66,16 +61,22 @@ console.log("ready!");
   How to
 </button>
 
+
+
 <!-- Modal -->
 <div class="modal fade" id="modalInstruction" role="dialog">
  <div class="modal-dialog">
   <div class="modal-content">
   <div class="modal-header">
-    <h5>Instructions:</h5>
+    <h2>Instructions:</h2>
   </div>
   <div class="modal-body">
     <ul>
-      <li>enter instructions later</li>
+      <li>Choose a catagory and an amount.</li>
+      <li>Click on it to see the question.</li>
+      <li>Click the "Show question" button to show the question.</li>
+      <li>Click the "Done" button to go back to the game board.</li>
+      <li>Click the "Game Selection" button to go back to the game selection page.</li>
     </ul>
   </div>
   <div class="modal-footer">
@@ -108,5 +109,6 @@ console.log("ready!");
  </div>
 </div>
 
-<h1><a href='/startOver' class='startover'>End Game</a></h1>
+<button type="button" class="btn btn-Warning btn-lg" onclick="window.location.href='/SampleJs'">Game Selection</button>
+
 {% endblock %}

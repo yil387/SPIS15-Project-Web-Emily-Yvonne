@@ -4,7 +4,7 @@ import json
 
 app = Flask(__name__)
 
-#Trying to use session to remember which links are visited, in progress
+
 app.secret_key='gpknangaxqppgnk'; 
 
 
@@ -178,6 +178,9 @@ def Qucsd(cat, dollar):
 def Aucsd(cat, dollar):
     return render_template('Aucsd.html', cat=int(cat), dollar=int(dollar), topics=ucsdCats, As=ucsdAs)
 
+@app.route('/instruction')
+def instruction():
+    return render_template('instruction.html')
 
 #Foundation of CS Jeopardy
 @app.route('/Jfocs')
@@ -208,4 +211,4 @@ def Jfocs2():
     return render_template('Jfocs2.html')
 
 if __name__=="__main__":
-    app.run(debug=True,host="0.0.0.0")
+    app.run(debug=False,host="0.0.0.0")
