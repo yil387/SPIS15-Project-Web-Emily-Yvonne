@@ -2,11 +2,21 @@
 
 {% block title %}UCSD Jeopardy{% endblock %}
 
-{% block content %}
 
+
+{% block header %}
 
 <img src="{{ url_for('static', filename='jeopardy-logo-03.png') }}" alt="JEOPARDY!">
 
+{% endblock %}
+
+
+
+{% block content %}
+
+
+
+<div align="center">
 <table class="jGameBoard">
   <tr class="jHead"></tr>
     <th>History</th>
@@ -26,6 +36,7 @@
 
 </table>
 
-<h1><a href='/instruction'>How To Play</a></h1>
+<h1><a href='/instruction' class='startover'>How To Play</a></h1>
 <h1><a href='/startOver' class='startover'>End Game</a></h1>
+</div>
 {% endblock %}

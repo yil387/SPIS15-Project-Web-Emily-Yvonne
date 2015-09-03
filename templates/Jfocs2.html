@@ -28,11 +28,19 @@ console.log("ready!");
 
 
 {% endblock %}
-{% block content %}
 
+
+{% block header %}
 
 <img src="{{ url_for('static', filename='jeopardy-logo-03.png') }}" alt="JEOPARDY!">
 
+{% endblock %}
+
+
+{% block content %}
+
+
+<div align="center">
 <table class="jGameBoard">
   <tr class="jHead"></tr>
     <th>cat0</th>
@@ -50,7 +58,7 @@ console.log("ready!");
   </tr>
   {% endfor %}
 
-</table><br>
+</table></div><br>
 
 
 
@@ -97,7 +105,7 @@ console.log("ready!");
     <div  id="jeopardy-question">
       question goes here
     </div>
-    <div  id="jeopardy-answer">
+    <div  id="jeopardy-answer"><br>
       answer goes here
     </div>
   </div>

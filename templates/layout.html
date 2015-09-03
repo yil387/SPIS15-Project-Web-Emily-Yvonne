@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
 <head>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style11.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style14.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <title>{% block title %}{% endblock %} - My Webpage</title>
 </head>
 
 <body>
+ <div id="header">{% block header %}{% endblock %}</div>
  <div id="content">{% block content %}{% endblock %}</div>
 </body>
 
