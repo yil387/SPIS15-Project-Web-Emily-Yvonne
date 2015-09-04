@@ -104,7 +104,7 @@ focsAs = {100:'What is a RIGHT TRIANGLE?',\
 	  200:'What is return the Length of My List?',\
 	  300:'What is a+a?',\
 	  400:'What is 2^13 (or 13)?',\
-	  500:'What is 34 in binary?',\
+	  500:'What is 18 in binary?',\
           101:'What is Divide and Conquer method?',\
 	  201:'What is the coordinate system of an image?',\
 	  301:'What is a base case?',\
