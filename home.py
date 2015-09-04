@@ -12,6 +12,7 @@ app.secret_key='gpknangaxqppgnk';
 
 @app.route('/')
 def homePage():
+    session.clear()
     return render_template('home.html')
 
 
